@@ -23,14 +23,22 @@ public class RecipeDebugger implements INotify {
     
     @Override
 	public void NotifyAdded(Object added) {
-		IRecipe r = (IRecipe)added;
+		IRecipe r = (IRecipe) added;
 		ItemStack s = r.getRecipeOutput();
 		String dn = "";
 		String un = "";
+		if (s.getItem() == null) {
+			System.out.println("Recipe with no item!" + added.toString());
+			return;
+		}
+			
 		dn = s.getDisplayName();
 		un = s.getUnlocalizedName();
 		UniqueIdentifier id = GameRegistry.findUniqueIdentifierFor(s.getItem());
 		System.out.println("Recipe Added by " + id.modId + " [" + dn + "] - [" + un + "]");
+		
+		
+		
 	}
 
 	@Override
@@ -39,6 +47,10 @@ public class RecipeDebugger implements INotify {
 		ItemStack s = r.getRecipeOutput();
 		String dn = "";
 		String un = "";
+		if (s.getItem() == null) {
+			System.out.println("Recipe with no item!");
+			return;
+		}
 		dn = s.getDisplayName();
 		un = s.getUnlocalizedName();
 		UniqueIdentifier id = GameRegistry.findUniqueIdentifierFor(s.getItem());
