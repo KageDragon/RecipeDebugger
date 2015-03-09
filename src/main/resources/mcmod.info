@@ -1,16 +1,18 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+"modid": "recipedebugger",
+"name": "Recipe Debugger",
+"description": "Notifies when a recipe is added or removed",
+"version": "0.1",
+"credits": "Created by KageDragon",
+"logoFile": "",
+"mcversion": "",
+"url": "",
+"updateUrl": "",
+"authors": "KageDragon",
+"parent":"",
+"screenshots": [],
+"dependencies": [
+     "mod_MinecraftForge"
 ]
+}
